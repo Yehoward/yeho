@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../../../css/main.css" />
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <title>Yehoward si temele lui</title>
+  </head>
+
+  <body
+    class="repartitia-populi-background "
+  >
+    <main>
+      <h1>Dinamica populatiei in Europa si in Africa</h1>
+
+      <div id="graphVariation"></div>
+      <div id="piramidaAfrica"></div>
+      <div id="piramidaEuropa"></div>
+
+      <p class="para-header">Repartizarea populatiei in Europa</p>
+      <div
+        style="
+          width: 70%;
+          margin: 0 auto;
+          padding: 10px;
+          border: 2px solid black;
+        "
+      >
+        <img
+          src="../../../../img/europe-repartition.jpg"
+          alt="Europa"
+          style="object-fit: contain; width: 100%"
+        />
+      </div>
+
+      <p style="font-size: 26px">Repartitia populatiei in Africa</p>
+      <div
+        style="
+          width: 70%;
+          margin: 0 auto;
+          padding: 10px;
+          border: 2px solid black;
+        "
+      >
+        <img
+          src="../../../../img/populi-dinamics-in-africa.jpg"
+          alt="Africa"
+          style="object-fit: contain; width: 100%"
+        />
+      </div>
+    </main>
+    <script>
+      // Cresterea populatiei continentelor
+      const x = [
+        1900, 1950, 1970, 1980, 1985, 1995, 2000, 2003, 2007, 2010, 2015, 2020,
+      ];
+
+      const populationEurope = [
+        409278612, 551367464, 659105522, 698193673, 709173934, 727829046,
+        726428531, 727646325, 732126516, 735812358, 738626079, 739685816,
+      ];
+
+      const populationAfrica = [
+        133849113, 230963759, 369936968, 484124442, 557107741, 728649204,
+        823143281, 885726300, 978706417, 1056391751, 1199721940, 1354617459,
+      ];
+
+      // const new_data = (trace) => Object.assign(trace, {y: x.map(rand)});
+
+      // add random data to three line traces
+      const data = [
+        {
+          mode: "lines",
+          name: "Africa",
+          line: { shape: "spline", color: "#b55400" },
+          y: populationAfrica,
+          x,
+        },
+        {
+          mode: "lines",
+          name: "Europa",
+          line: { shape: "spline", color: "#393e46" },
+          y: populationEurope,
+          x,
+        },
+      ];
+
+      const layout = {
+        title:
+          "Cresterea populatiei a Africii si a Europei, sec.XIX, inceput sec.XX",
+        uirevision: "true",
+        xaxis: {
+          title: "Anul",
+          autorange: true,
+        },
+        yaxis: {
+          title: "Populația",
+          autorange: true,
+        },
+      };
+
+      Plotly.react("graphVariation", data, layout);
+
+      // Piramida
+
+      var barbatiAfr = {
+        x: [
+          -7.7, -6.9, -6, -5.2, -4.5, -4, -3.5, -3, -2.4, -2, -1.5, -1.2, -1,
+          -0.7, -0.4, -0.3, -0.15, -0.1, -0.02, -0.002, -0.0001,
+        ],
+        base: 0,
+        y: [
+          "0-4",
+          "5-9",
+          "10-14",
+          "15-19",
+          "20-24",
+          "25-29",
+          "30-34",
+          "35-39",
+          "40-44",
+          "45-49",
+          "50-54",
+          "55-59",
+          "60-64",
+          "65-69",
+          "70-74",
+          "75-79",
+          "80-84",
+          "85-89",
+          "90-94",
+          "95-99",
+          "100+",
+        ],
+        name: "Barbați",
+        orientation: "h",
+        marker: {
+          color: "rgba(55,128,191,0.6)",
+          width: 1,
+        },
+        type: "bar",
+      };
+
+      var femeiAfr = {
+        x: [
+          7.5, 6.7, 5.8, 5, 4.4, 3.9, 3.5, 3, 2.4, 2, 1.6, 1.3, 1, 0.8, 0.5,
+          0.3, 0.2, 0.09, 0.032, 0.003, 0.0003,
+        ],
+        base: 0,
+        y: [
+          "0-4",
+          "5-9",
+          "10-14",
+          "15-19",
+          "20-24",
+          "25-29",
+          "30-34",
+          "35-39",
+          "40-44",
+          "45-49",
+          "50-54",
+          "55-59",
+          "60-64",
+          "65-69",
+          "70-74",
+          "75-79",
+          "80-84",
+          "85-89",
+          "90-94",
+          "95-99",
+          "100+",
+        ],
+        name: "Femei",
+        orientation: "h",
+        type: "bar",
+        marker: {
+          color: "rgba(255,153,51,0.6)",
+          width: 1,
+        },
+      };
+
+      var dataPiramidaAfr = [femeiAfr, barbatiAfr];
+
+      var layoutPrimaidaAfr = {
+        title: "Repartiția populație pe vîrstă și sex. Africa.",
+        barmode: "stack",
+      };
+
+      Plotly.newPlot("piramidaAfrica", dataPiramidaAfr, layoutPrimaidaAfr);
+
+      var barbatiEur = {
+        x: [
+          -2.7, -2.9, -2.7, -2.4, -2.5, -3, -3.6, -3.5, -3.4, -3.3, -3.4, -3.5,
+          -3.1, -2.8, -1.9, -1.4, -1.4, -0.6, -0.3, -0.05, -0.003,
+        ],
+        base: 0,
+        y: [
+          "0-4",
+          "5-9",
+          "10-14",
+          "15-19",
+          "20-24",
+          "25-29",
+          "30-34",
+          "35-39",
+          "40-44",
+          "45-49",
+          "50-54",
+          "55-59",
+          "60-64",
+          "65-69",
+          "70-74",
+          "75-79",
+          "80-84",
+          "85-89",
+          "90-94",
+          "95-99",
+          "100+",
+        ],
+        name: "Barbați",
+        orientation: "h",
+        marker: {
+          color: "rgba(55,128,191,0.6)",
+          width: 1,
+        },
+        type: "bar",
+      };
+
+      var femeiEur = {
+        x: [
+          2.5, 2.8, 2.6, 2.3, 2.4, 3, 3.5, 3.5, 3.5, 3.4, 3.6, 3.8, 3.7, 3.4,
+          2.3, 2, 1.8, 1, 0.6, 0.14, 0.1,
+        ],
+        base: 0,
+        y: [
+          "0-4",
+          "5-9",
+          "10-14",
+          "15-19",
+          "20-24",
+          "25-29",
+          "30-34",
+          "35-39",
+          "40-44",
+          "45-49",
+          "50-54",
+          "55-59",
+          "60-64",
+          "65-69",
+          "70-74",
+          "75-79",
+          "80-84",
+          "85-89",
+          "90-94",
+          "95-99",
+          "100+",
+        ],
+        name: "Femei",
+        orientation: "h",
+        type: "bar",
+        marker: {
+          color: "rgba(255,153,51,0.6)",
+          width: 1,
+        },
+      };
+
+      var layoutPrimaidaEur = {
+        title: "Repartiția populație pe vîrstă și sex. Europa.",
+        barmode: "stack",
+      };
+
+      var dataPiramidaAfr = [femeiEur, barbatiEur];
+      Plotly.newPlot("piramidaEuropa", dataPiramidaAfr, layoutPrimaidaEur);
+    </script>
+  </body>
+</html>
