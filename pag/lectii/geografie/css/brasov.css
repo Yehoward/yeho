@@ -10,6 +10,7 @@
 #locatia {
   background-image: url("../brasov/rumania.png");
   height: 70vh;
+  position: center;
 }
 
 #rep-mold{
