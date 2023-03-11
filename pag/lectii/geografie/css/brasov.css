@@ -32,6 +32,30 @@
   height: 50vh;
 }
 
+.slaidsow {
+  max-width: 800px;
+  margin: 0 auto;
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.slaidsow > img {
+  max-width: 600px;
+  width: calc(100% - 5em);
+}
+
+.slaidsow > button {
+  height: 100%;
+  width: 1.7em;
+  font-size: 5em;
+  font-family: "Material Icons";
+  border: none;
+}
+
 .bg {
   height: 100vh;
   background-size: cover;
