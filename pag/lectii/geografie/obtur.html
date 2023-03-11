@@ -118,109 +118,100 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="section">
+      <div class="info">
+        <ul>
+          <li><a href="https://aro-palace.ro/">Aro Palace</a></li>
+          <li><a href="https://www.gardenclub.ro/">Hotel Garden Club</a></li>
+        </ul>
+        <p>Din poiana Brașovului:</p>
+        <ul>
+          <li><a href="https://www.piatramare.ro/en/">Piatra Mare</a></li>
+          <li>
+            <a href="https://house-of-dracula.com/index">Acasă la Dracula</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="slaidsow">
+      <button onclick="nextImage('timpa_show')">chevron_left</button>
+      <img id="timpa_show" src="brasov/osm.png" alt="slideshow brashow">
+      <button onclick="prevImage('timpa_show')">chevron_right</button>
+    </div>
+
+    <h1 id="fsop">FSOP</h1>
+    <h1 id="puncte-forte">Puncte forte</h1>
+    <ul>
+      <li>Frumos</li>
+      <li>Limba romînă</li>
+    </ul>
+    <h2 id="puncte-slabe">Puncte slabe</h2>
+    <h2 id="oportunitati">Oportunitati</h2>
+    <h2 id="pericole">Pericole</h2>
+  </main>
+
+  <script>
+    let curImg = 0;
+    //const images = [
+    //  "./brasov/osm.png",
+    //  "./brasov/bigben.jpg",
+    //  "./brasov/timpa.jpg",
+    //]
+
+    const images = {
+      timpa_show: {
+        curent: 0,
+        images: [
+      "./brasov/osm.png",
+      "./brasov/bigben.jpg",
+      "./brasov/timpa.jpg",
+        ]
+      },
+
+      postavarul: {
+        curent: 0,
+        images: []
+      },
+
+      biserica_nigga: {
+        curent: 0,
+        images: []
+      },
+    }
+
+   // function setImage(slaidsowID) {
+   //   const slaidshow = document.getElementById(slaidsowID)
+   //   slaidshow.style.background = images[slaidsowID].images[curImg]
+
+   // }
+
+    function nextImage(slaidsowID) {
+      const slaidsowImg = document.getElementById(slaidsowID);
+      const curImg = (images[slaidsowID].curent + 1) % images[slaidsowID].images.length
+      images[slaidsowID].curent = curImg
+      console.dir(images[slaidsowID].images[curImg])
+      console.dir(slaidsowImg)
       
-      <div id="timpa" class="bg">
-        <div class="overlay">
-          <div class="text">
-            <h1>Muntele Tîmpa</h1>
-            <p>
-        Tâmpa este un munte care aparține de masivul Postăvaru (o grupă muntoasă
-        a Carpaților), înconjurat aproape în totalitate de municipiul Brașov.
-            </p>
-          </div>
-        </div>
-      </div>
-<div id="timpa-inaltime" class="bg">
-        <div class="overlay">
-          <div class="text">
-            <h1>Înalțimea muntelui</h1>
-            <p>Este mare...</p>
-          </div>
-        </div>
-      </div>
-      <h3 id="stejerișul-mare-colții-corbului-mare">
-        Stejerișul Mare (Colții Corbului Mare)
-      </h3>
-      <p>
-        Stejerișul Mare (Colții Corbului Mare) este o arie protejată de interes
-        național.
-      </p>
-      <h3 id="postăvarul-sit-de-importanță-comunitară">
-        Postăvarul (sit de importanță comunitară)
-      </h3>
-      <p>
-        Postăvarul este un sit de importanță comunitară desemnat în scopul
-        protejării biodiversității și menținerii într-o stare de conservare
-        favorabilă a florei și faunei sălbatice, precum și a unor habitate de
-        interes comunitar
-      </p>
-      <h3 id="poiana-brașov">Poiana Brașov</h3>
-      <p>
-        Poiana Brașov este o localitate componentă a municipiului Brașov și o
-        stațiune de schi.
-      </p>
-      <p>
-        Poiana Brașov dispune de 12 pârtii de schi cu grade diferite de
-        dificultate, terenuri de sport, un lac, discoteci, baruri și
-        restaurante.
-      </p>
-      <p>
-        Stațiunea este de asemenea recomandată pentru tratamentul nevrozei
-        astenice, pentru stări de epuizare și surmenaj fizic și intelectual,
-        pentru anemii secundare și boli endocrine, pentru boli ale aparatului
-        respirator. Deseori, iarna, temperatura ajunge la -15°C.
-      </p>
-      <h3 id="pietrele-lui-solomon.">Pietrele lui Solomon.</h3>
-      <p>
-        Pietrele lui Solomon alcătuiesc o zonă de interes turistic, situată în
-        partea sud-vestică a cartierului Șchei din municipiul Brașov. Pietrele
-        lui Solomon reprezintă o arie naturală în al cărei teritoriu se află mai
-        multe formațiuni geologice
-      </p>
-      <h2 id="turistice-antropice">Obiective turistice antropice</h2>
-      <h3 id="biserica-neagră">Biserica Neagră</h3>
-      <p>
-        Cea mai celebră din oraș, construită între 1377 și 1477 pe locul unei
-        vechi bazilici romane.
-      </p>
-      <h3 id="casa-sfatului">Casa sfatului</h3>
-      <p>
-        Casa Sfatului din Brașov, vechea primărie situată în Piața
-        Sfatului(centrul istoric al Brașovului) din centrul istoric al orașului,
-        reprezintă cel mai important monument laic al Brașovului
-      </p>
-      <h3 id="piața-sfatului">Piața Sfatului</h3>
-      <p>
-        Piața Sfatului, situată în mijlocul centrului istoric al Brașovului , a
-        reprezentat un important centru comercial, social și cultural de-a
-        lungul timpului.
-      </p>
-      <h1 id="amenajări-turistice">Amenajări turistice</h1>
-      <p>
-        Municipiul Brașov dispune de o mulțime de hoteluri și pensiuni de
-        diferite categorii care însumează un număr de peste 5.000 de locuri de
-        cazare. Cele mai notabile sunt:
-      </p>
-      <ul>
-        <li><a href="https://aro-palace.ro/">Aro Palace</a></li>
-        <li><a href="https://www.gardenclub.ro/">Hotel Garden Club</a></li>
-      </ul>
-      <p>Din poiana Brașovului:</p>
-      <ul>
-        <li><a href="https://www.piatramare.ro/en/">Piatra Mare</a></li>
-        <li>
-          <a href="https://house-of-dracula.com/index">Acasă la Dracula</a>
-        </li>
-      </ul>
-      <h1 id="fsop">FSOP</h1>
-      <h1 id="puncte-forte">Puncte forte</h1>
-      <ul>
-        <li>Frumos</li>
-        <li>Limba romînă</li>
-      </ul>
-      <h2 id="puncte-slabe">Puncte slabe</h2>
-      <h2 id="oportunitati">Oportunitati</h2>
-      <h2 id="pericole">Pericole</h2>
-    </main>
-  </body>
+      slaidsowImg.src = images[slaidsowID].images[curImg]
+    }
+
+    function prevImage(slaidsowID) {
+      const slaidsowImg = document.getElementById(slaidsowID);
+      let curImg = images[slaidsowID].curent 
+
+      if (curImg === 0) curImg = images[slaidsowID].images.length - 1
+      else
+        curImg = (images[slaidsowID].curent + 1) % images[slaidsowID].images.length
+
+      images[slaidsowID].curent = curImg
+      slaidsowImg.src = images[slaidsowID].images[curImg]
+    }
+
+
+  </script>
+</body>
+
 </html>
