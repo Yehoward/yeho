@@ -204,7 +204,7 @@
 
       if (curImg === 0) curImg = images[slaidsowID].images.length - 1
       else
-        curImg = (images[slaidsowID].curent + 1) % images[slaidsowID].images.length
+        curImg = (images[slaidsowID].curent - 1) % images[slaidsowID].images.length
 
       images[slaidsowID].curent = curImg
       slaidsowImg.src = images[slaidsowID].images[curImg]
