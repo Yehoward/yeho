@@ -10,15 +10,15 @@
 #locatia {
   background-image: url("../brasov/rumania.png");
   height: 70vh;
-  position: center;
+  background-position: center;
 }
 
-#rep-mold{
+#rep-mold {
   background-image: url("../brasov/autoruta-daleco.png");
   height: 70vh;
 }
 
-#naturale{
+#naturale {
   background-image: url("../brasov/butifull.jpg");
   height: 100vh;
 }
@@ -30,6 +30,81 @@
 #timpa-inaltime {
   background-image: url("../brasov/helipoper.jpg");
   height: 50vh;
+}
+
+#postavarul {
+  background-image: url("../brasov/postavarul.jpg");
+  height: 100vh;
+}
+
+#stejaris {
+  background-image: url("../brasov/Stejerisul_Mare_near_Brasov.jpg");
+  height: 100vh;
+}
+
+#postavar-sit {
+  background-image: url("../brasov/RO_BV_Postavarul_sit.jpg");
+  height: 100vh;
+}
+
+#poiana {
+  background-image: url("../brasov/poiana-brasov-bg.webp");
+  height: 100vh;
+}
+
+#solomon {
+  background-image: url("../brasov/solomon4.jpg");
+  height: 100vh;
+}
+
+#antropice {
+  background-image: url("../brasov/pistraduta.jpg");
+  height: 100vh;
+}
+
+#biserica-nigger {
+  background-image: url("../brasov/biserica-neagra1.jpg");
+  height: 100vh;
+}
+
+#casa-sfatului {
+  background-image: url("../brasov/bigben.jpg");
+  height: 100vh;
+}
+
+#piata-sfatului {
+  background-image: url("../brasov/CasaSfatului.jpg");
+  height: 100vh;
+}
+
+#amenajari-turistice {
+  background-image: url("../brasov/brasovul_vechi.jpg");
+  height: 100vh;
+}
+
+#fsop {
+  background-image: url("../brasov/fsop.webp");
+  height: 110vh;
+}
+
+#forte {
+  background-image: url("../brasov/wall.jpg");
+  height: 70vh;
+}
+
+#slabe {
+  background-image: url("../brasov/picolina.jpg");
+  height: 70vh;
+}
+
+#oportunitati {
+  background-image: url("../brasov/crede_badean_solomon.jpg");
+  height: 70vh;
+}
+
+#pericole {
+  background-image: url("../brasov/ursu.webp");
+  height: 100vh;
 }
 
 .slaidsow {
@@ -91,6 +166,19 @@ body {
   margin: 0 auto;
 }
 
+
+.text > ul > li{
+  padding: 5px;
+}
+
+.text > ul{
+  text-align: center;
+  font-size: 1.2rem;
+  list-style: none;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
 .info {
   max-width: 800px;
   margin: 0 auto;
@@ -99,8 +187,8 @@ body {
   font-size: 18px;
 }
 
-#timpa-inaltime > .overlay > .text ,
-#rep-mold > .overlay > .text ,
+#timpa-inaltime > .overlay > .text,
+#rep-mold > .overlay > .text,
 #locatia > .overlay > .text {
   padding: 5% 20px;
 }

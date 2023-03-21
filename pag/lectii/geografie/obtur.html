@@ -1,97 +1,104 @@
 <!DOCTYPE html>
 <html lang="ro">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- <link rel="stylesheet" href="../../../css/main.css" /> -->
-    <link rel="stylesheet" href="css/brasov.css" />
-    <title>Yehoward si temele lui</title>
-  </head>
-  <body>
-    <main>
-      <div id="intro" class="bg">
-        <div class="overlay">
-          <div class="text">
-            <h1>Bine ați venit la Brașov</h1>
-            <p>Oraș - istorie</p>
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- <link rel="stylesheet" href="../../../css/main.css" /> -->
+  <link rel="stylesheet" href="css/brasov.css" />
+  <title>Yehoward si temele lui</title>
+</head>
+
+<body>
+  <main>
+    <div id="intro" class="bg">
+      <div class="overlay">
+        <div class="text">
+          <h1>Bine ați venit la Brașov</h1>
+          <p>Oraș - istorie</p>
         </div>
       </div>
+    </div>
 
-      <div class="section">
-        <div class="info">
-          Brașovul este fascinant în orice anotimp. Istoria, cultura,
-          arhitectura, sunt elemente care te vor surprinde peste tot. Te invităm
-          să parcurgi la pas Brașovul, urmand traseele propuse mai jos sau, pur
-          si simplu, alegand locurile pe care vei vrea să le vizitezi. In lista
-          de jos, apasând pe bulina roșie vei fi dirijat automat către acel loc.
+    <div class="section">
+      <div class="info">
+        Brașovul este fascinant în orice anotimp. Istoria, cultura,
+        arhitectura, sunt elemente care te vor surprinde peste tot. Te invităm
+        să parcurgi la pas Brașovul, urmand traseele propuse mai jos sau, pur
+        si simplu, alegand locurile pe care vei vrea să le vizitezi. In lista
+        de jos, apasând pe bulina roșie vei fi dirijat automat către acel loc.
+      </div>
+    </div>
+    <div class="slaidsow">
+      <button onclick="nextImage('timpa_show')">chevron_left</button>
+      <img id="timpa_show" src="brasov/osm.png" alt="slideshow brashow">
+      <button onclick="prevImage('timpa_show')">chevron_right</button>
+    </div>
+
+    <div id="locatia" class="bg">
+      <div class="overlay">
+        <div class="text">
+          <h1>Locatia</h1>
+          <p>
+            Municipiul Brașov, reședința județului Brașov, este localizat în
+            centrul Romîniei la distanța de ~160km față de capitală. Brașovul
+            este situat în curbura internă a munților Carpați.
+          </p>
         </div>
       </div>
+    </div>
 
-      <div id="locatia" class="bg">
-        <div class="overlay">
-          <div class="text">
-            <h1>Locatia</h1>
-            <p>
-              Municipiul Brașov, reședința județului Brașov, este localizat în
-              centrul Romîniei la distanța de ~160km față de capitală. Brașovul
-              este situat în curbura internă a munților Carpați.
-            </p>
-          </div>
-        </div>
-      </div>
+    <!-- <p> -->
+    <!--   <a -->
+    <!--     href="https://osm.org/go/0ghefQp-%3flayers=Y&amp;m=&amp;relation=10367676" -->
+    <!--     >https://osm.org/go/0ghefQp-?layers=Y&amp;m=&amp;relation=10367676</a -->
+    <!--   > -->
+    <!--   Municipiul Brașov, reședința județului Brașov, este localizat în centrul -->
+    <!--   Romîniei la distanța de ~160km față de capitală. Brașovul este situat în -->
+    <!--   curbura internă a munților Carpați. -->
+    <!-- </p> -->
 
-      <!-- <p> -->
-      <!--   <a -->
-      <!--     href="https://osm.org/go/0ghefQp-%3flayers=Y&amp;m=&amp;relation=10367676" -->
-      <!--     >https://osm.org/go/0ghefQp-?layers=Y&amp;m=&amp;relation=10367676</a -->
-      <!--   > -->
-      <!--   Municipiul Brașov, reședința județului Brașov, este localizat în centrul -->
-      <!--   Romîniei la distanța de ~160km față de capitală. Brașovul este situat în -->
-      <!--   curbura internă a munților Carpați. -->
-      <!-- </p> -->
-
-      <div class="section">
-        <div class="info">
-          <h1 id="căi-de-acces">Căi de acces</h1>
-      <p>
-        Brașovul dispune de transport feroviar avînd unul din cele mai
-        importante noduri de cale ferate, cu toate acestea Brașovul nu are o
-        legătură feroviară directă cu Republica Moldova.
-      </p>
-      <p>
-        Municipiul are trei autogări cu microbuze și autobuze care fac legătură
-        cu aproape toată țara.
-      </p>
-      <p>
-        Prin Brașov trec 2 șosele de nivel intra-continental: 
+    <div class="section">
+      <div class="info">
+        <h1 id="căi-de-acces">Căi de acces</h1>
+        <p>
+          Brașovul dispune de transport feroviar avînd unul din cele mai
+          importante noduri de cale ferate, cu toate acestea Brașovul nu are o
+          legătură feroviară directă cu Republica Moldova.
+        </p>
+        <p>
+          Municipiul are trei autogări cu microbuze și autobuze care fac legătură
+          cu aproape toată țara.
+        </p>
+        <p>
+          Prin Brașov trec 2 șosele de nivel intra-continental:
 
         <ul>
           <li>E60 (Brest -
-        Nantes - Orléans - Auxerre - Zürich - Viena - Budapesta - Oradea - Cluj
-        Napoca - Târgu Mureș - Brașov - București - Constanța) </li>
+            Nantes - Orléans - Auxerre - Zürich - Viena - Budapesta - Oradea - Cluj
+            Napoca - Târgu Mureș - Brașov - București - Constanța) </li>
           <li>E68 (Szeged
-        (Seghedin) - Nădlac - Arad - Deva - Sebeș - Sibiu - Făgăraș - Brașov)</li>
+            (Seghedin) - Nădlac - Arad - Deva - Sebeș - Sibiu - Făgăraș - Brașov)</li>
         </ul>
 
-      </p>
+        </p>
+      </div>
+    </div>
+
+    <div id="rep-mold" class="bg">
+      <div class="overlay">
+        <div class="text">
+          <h1>Legatură cu Republica Moldova</h1>
+          <p>
+            Atît din municipiul Chișinău cît și din municipiu Bălți există legătură
+            directă prin autogară:
+          </p>
         </div>
       </div>
+    </div>
 
-      <div id="rep-mold" class="bg">
-        <div class="overlay">
-          <div class="text">
-            <h1>Legatură cu Republica Moldova</h1>
-            <p>
-        Atît din municipiul Chișinău cît și din municipiu Bălți există legătură
-        directă prin autogară:
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="section">
-        <div class="info">
+    <div class="section">
+      <div class="info">
         <h1>Transport rutier public</h1>
         <p>
           În interiorul municipiului Brașov sunt 44 de linii de autobuz și
@@ -102,44 +109,133 @@
           În Brașov există 7 mari companii de taxi. Tarifele sunt în jur de 2,19
           lei/km. Există, de asemenea, și servicii de închirieri auto în oraș.
         </p>
-      <h3 id="dezavantaje">Dezavantaje</h3>
-      <p>
-        Cu toate că calitatea transportului public este înaltă Brașovul nu
-        dispune de un metrou, care permite o deplasare mai rapidă prin oraș cu
-        evitarea ambuteiajelor.
-      </p>
-        </div>
+        <h3 id="dezavantaje">Dezavantaje</h3>
+        <p>
+          Cu toate că calitatea transportului public este înaltă Brașovul nu
+          dispune de un metrou, care permite o deplasare mai rapidă prin oraș cu
+          evitarea ambuteiajelor.
+        </p>
       </div>
+    </div>
 
-      <div id="naturale" class="bg">
-        <div class="overlay">
-          <div class="text">
-            <h1>Obiective turistice naturale</h1>
-          </div>
+    <div id="naturale" class="bg">
+      <div class="overlay">
+        <div class="text">
+          <h1>Obiective turistice naturale</h1>
         </div>
       </div>
     </div>
+
+    <div id="postavarul" class="bg">
+      <div class="overlay">
+        <div class="text">
+          <h1>Muntii Postăvarul</h1>
+          <p>Munții Postăvarul sunt o grupă muntoasă a Carpaților de Curbură</p>
+          <p>Cel mai înalt pisc este vârful cu aceeași denumire Vârful Postăvarul</p>
+          <p>În Postăvaru există 35 de trasee alpine omologate cu grade diferite de dificultate.</p>
+        </div>
+      </div>
+
+    <div id="postavar-sit" class="bg">
+      <div class="overlay">
+        <div class="text">
+          <h1>
+            Postăvarul (Sit)
+          </h1>
+          <p>
+            Postăvarul este un sit de importanță comunitară desemnat în scopul
+            protejării biodiversității și menținerii într-o stare de conservare
+            favorabilă a florei și faunei sălbatice, precum și a unor habitate de
+            interes comunitar
+          </p>
+        </div>
+      </div>
+    </div>
+
     <div class="section">
       <div class="info">
-        <ul>
-          <li><a href="https://aro-palace.ro/">Aro Palace</a></li>
-          <li><a href="https://www.gardenclub.ro/">Hotel Garden Club</a></li>
-        </ul>
-        <p>Din poiana Brașovului:</p>
-        <ul>
-          <li><a href="https://www.piatramare.ro/en/">Piatra Mare</a></li>
-          <li>
-            <a href="https://house-of-dracula.com/index">Acasă la Dracula</a>
-          </li>
-        </ul>
+        <h1>Localizarea</h1>
+        <p>Aria naturală este situată în partea sudică a județului Brașov (pe teritoriul nordic al orașului Predeal, sud-vestic al municipiului Săcele, vestic al Brașovului și cel estic al Râșnovului), în imediata apropiere a drumului național DN1 care leagă municipiul București de Sighișoara</p>
+        <h1>Descriere</h1>
+        <p>
+          Zona a fost declarată sit de importanță comunitară. Acesta se întinde pe o suprafață de 1.303 hectare între râul Timiș, Valea Cheii și stațiunea turistică Poiana Brașov
+        </p>
+        <p>
+          Situl Postăvarul prezintă o arie naturală cu o diversitate floristică și faunistică ridicată, exprimată atât la nivel de specii cât și la nivel de ecosisteme terestre.
+        </p>
+      </div>
+    </div>
 
+    <div id="poiana" class="bg">
+      <div class="overlay">
+        <div class="text">
+          <h1>Poiana Brașov</h1>
+          <p>
+            Poiana Brașov este o localitate componentă a municipiului Brașov și o
+            stațiune de schi.
+          </p>
+        </div>
       </div>
     </div>
 
     <div class="slaidsow">
-      <button onclick="nextImage('timpa_show')">chevron_left</button>
-      <img id="timpa_show" src="brasov/osm.png" alt="slideshow brashow">
-      <button onclick="prevImage('timpa_show')">chevron_right</button>
+      <button onclick="nextImage('poiana_slaid')">chevron_left</button>
+      <img id="poiana_slaid" src="brasov/poiana_brasov.jpg" alt="poiana brasov">
+      <button onclick="prevImage('poiana_slaid')">chevron_right</button>
+    </div>
+
+    <div class="section">
+      <div class="info">
+
+        <p>
+          Poiana Brașov dispune de 12 pârtii de schi cu grade diferite de
+          dificultate, terenuri de sport, un lac, discoteci, baruri și
+          restaurante.
+        </p>
+        <p>
+          Stațiunea este de asemenea recomandată pentru tratamentul nevrozei
+          astenice, pentru stări de epuizare și surmenaj fizic și intelectual,
+          pentru anemii secundare și boli endocrine, pentru boli ale aparatului
+          respirator. Deseori, iarna, temperatura ajunge la -15°C.
+        </p>
+      </div>
+    </div>
+
+    <div id="solomon" class="bg">
+      <div class="overlay">
+        <div class="text">
+          <h1>Pietrele lui Solomon.</h1>
+
+          <p>
+            Pietrele lui Solomon alcătuiesc o zonă de interes turistic, situată în
+            partea sud-vestică a cartierului Șchei din municipiul Brașov. Pietrele
+            lui Solomon reprezintă o arie naturală în al cărei teritoriu se află mai
+            multe formațiuni geologice
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+ <div class="slaidsow">
+      <button onclick="nextImage('pietre_show')">chevron_left</button>
+      <img id="pietre_show" src="brasov/solomon1.jpg" alt="pietrele lui solomon">
+      <button onclick="prevImage('pietre_show')">chevron_right</button>
+    </div>   
+
+    <div class="section">
+      <div class="info">
+        <h1>Locatia</h1>
+        <p>
+          Pietrele lui Solomon se află în partea nord-vestică a Masivului Postăvarul, între Muntele Tâmpa și rezervația naturală
+          Stejerișul Mare
+          </p>
+        <h1>Descriere</h1>
+        <p>
+          Pietrele lui Solomon reprezintă o arie naturală în al cărei teritoriu se află mai multe formațiuni geologice (abrupturi
+          calcaroase, stâncării, grohotișuri, turnuri), fenomene carstice de un deosebit interes peisagistic și turistic.
+          </p>
+      </div>
     </div>
 
     <h1 id="fsop">FSOP</h1>
