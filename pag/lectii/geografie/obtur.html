@@ -262,19 +262,69 @@
         curent: 0,
         images: [
       "./brasov/osm.png",
-      "./brasov/bigben.jpg",
-      "./brasov/timpa.jpg",
         ]
       },
 
-      postavarul: {
+      muntii_postavarul_show: {
         curent: 0,
-        images: []
+        images: [
+          "./brasov/Masivul_Postavaru_3D_version1.gif",
+          "./brasov/RO_BV_Postavarul_3.jpg",
+          "./brasov/postavarul.jpg",
+          "./brasov/virf-postavar.jpg",
+          "./brasov/virf-postavar-alt.jpg",
+          "./brasov/postavarul-mountain-1.jpg",
+          "./brasov/Postavarul_mountain.jpg",
+          "./brasov/Predeal_and_Mount_Postavaru.jpg",
+          "./brasov/Postavarul_Massif.jpg"
+        ]
+      },
+
+      poiana_slaid:{
+        curent: 0,
+        images: [
+          "./brasov/poiana_brasov.jpg",
+          "./brasov/poiana_brasov1.jpg",
+          "./brasov/poiana_brasov2.jpg",
+          "./brasov/poiana-brasov3.webp",
+        ]
+      },
+
+
+      pietre_show: {
+        curent: 0,
+        images: [
+          "./brasov/solomon0.jpg",
+          "./brasov/solomon1.jpg",
+          "./brasov/solomon2.jpg",
+          "./brasov/solomon3.jpg",
+        ]
       },
 
       biserica_nigga: {
         curent: 0,
-        images: []
+        images: [
+          "./brasov/biserica-neagra-wide.jpg",
+          "./brasov/orga-bisericii0.jpg",
+          "./brasov/Biserica-Neagra.jpg",
+          "./brasov/Brasov_chiesa_nera_06.jpg",
+          "./brasov/Biserica_Neagra_si_Piata_Sfatului_-_centrul_vechi.jpg",
+        ]
+      },
+      hoteluri: {
+        curent: 0,
+        images: [
+          "./brasov/aro.png",
+          "./brasov/garden.png",
+          "./brasov/piatrabig.png",
+          "./brasov/dracu.png",
+        ],
+        link: [
+          "https://aro-palace.ro/",
+          "https://www.gardenclub.ro/",
+          "https://www.piatramare.ro/en/",
+          "https://house-of-dracula.com/index",
+        ],
       },
     }
 
@@ -284,7 +334,7 @@
 
    // }
 
-    function nextImage(slaidsowID) {
+    function nextImage(slaidsowID, linkID) {
       const slaidsowImg = document.getElementById(slaidsowID);
       const curImg = (images[slaidsowID].curent + 1) % images[slaidsowID].images.length
       images[slaidsowID].curent = curImg
@@ -292,6 +342,10 @@
       console.dir(slaidsowImg)
       
       slaidsowImg.src = images[slaidsowID].images[curImg]
+      console.log(linkID)
+      if (linkID){
+      document.getElementById(linkID).href = images[slaidsowID].link[curImg]
+      }
     }
 
     function prevImage(slaidsowID) {
@@ -302,8 +356,11 @@
       else
         curImg = (images[slaidsowID].curent - 1) % images[slaidsowID].images.length
 
+    // console.dir(images[slaidsowID].images[curImg])
+    // console.dir(slaidsowImg)
       images[slaidsowID].curent = curImg
       slaidsowImg.src = images[slaidsowID].images[curImg]
+      slaidsowImg.href = images[slaidsowID].link[curImg]
     }
 
 
