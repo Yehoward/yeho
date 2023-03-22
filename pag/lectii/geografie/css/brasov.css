@@ -128,8 +128,7 @@
   height: 100%;
   width: 1.7em;
   font-size: 5em;
-  font-family: "Material Icons";
-  src: url("/material_design_iconic_font.ttf");
+  font-family: "MaterialIcons";
   border: none;
 }
 
