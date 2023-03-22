@@ -7,6 +7,11 @@
   --text:#484b6a;
 }
 
+@font-face {
+  font-family: MaterialIcons;
+  src: url("../material_design_iconic_font.ttf");
+}
+
 main{
   background-color: var(--backgroun-alt);
   margin: auto auto;
