@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Material Icons";
+  src: url("/material_design_iconic_font.ttf");
+}
+
 #intro {
   background-image: url("../brasov/brasov_text.jpg");
   background-position: left;
